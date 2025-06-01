@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Vendas - Marketing Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Instagram Modal -->
+    <div class="instagram-modal" id="instagramModal">
+        <div class="modal-content">
+            <h2>Bem-vindo à Red Vendas!</h2>
+            <p>Por favor, digite seu Instagram para continuar:</p>
+            <form id="contactForm" onsubmit="return submitContactInfo(event)">
+                <div class="input-group">
+                    <span class="input-prefix">@</span>
+                    <input type="text" id="instagramInput" placeholder="seu.instagram" required>
+                </div>
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div class="background-overlay"></div>
+    <div class="notifications-container"></div>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="#home" class="logo-link">
+                    <img src="f79124cc-1858-48e7-bbab-4ab3cc0661f9_bulldog-logo-png-seeklogo-300263-removebg-preview.png" alt="Red Vendas Logo" class="logo-image">
+                </a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Início</a>
+                <a href="#planos" class="nav-link">Planos</a>
+                <a href="produtos.html" class="nav-link">Produtos</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </div>
+        </nav>
+
+        <header id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Red Vendas</h1>
+                <p class="tagline">Soluções em Marketing Digital</p>
+                <div class="hero-description">
+                    <p>Transforme sua presença digital em resultados reais</p>
+                    <p>Estratégias comprovadas para impulsionar seu negócio</p>
+                </div>
+                <div class="hero-cta">
+                    <a href="#planos" class="cta-button">Começar Agora</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="planos" class="plans-section">
+                <div class="section-header">
+                    <h2 class="section-title">Nossos Planos</h2>
+                    <p class="section-description">Escolha o plano ideal para o seu negócio</p>
+                </div>
+                
+                <div class="products">
+                    <div class="category-label premium-label">Mais Popular</div>
+                <a href="https://pay.kiwify.com.br/FIkpPhl?afid=WsCFvDIR" class="product-card premium">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fas fa-crown"></i>
+                            <h3>Plano Premium + Bônus</h3>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Acesso completo à plataforma</li>
+                                <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                                <li><i class="fas fa-check"></i> Bônus exclusivos</li>
+                                <li><i class="fas fa-check"></i> Atualizações premium</li>
+                            </ul>
+                        </div>
+                        <div class="card-action">
+                            <span class="action-text">Começar Agora</span>
+                            <span class="arrow">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://pay.kiwify.com.br/aG3R0vz?afid=WsCFvDIR" class="product-card basic">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fas fa-star"></i>
+                            <h3>Plano Básico</h3>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Acesso básico à plataforma</li>
+                                <li><i class="fas fa-check"></i> Suporte por email</li>
+                                <li><i class="fas fa-check"></i> Recursos essenciais</li>
+                                <li><i class="fas fa-check"></i> Atualizações regulares</li>
+                            </ul>
+                        </div>
+                        <div class="card-action">
+                            <span class="action-text">Começar Agora</span>
+                            <span class="arrow">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                </div>
+                <div class="see-more-container">
+                    <a href="produtos.html" class="see-more-button">
+                        <span>Ver Mais Produtos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section id="contato" class="contact-section">
+                <div class="section-header">
+                    <h2 class="section-title">Fale Conosco</h2>
+                    <p class="section-description">Tire suas dúvidas e descubra mais sobre nossos serviços</p>
+                </div>
+                
+                <div class="contact-cards">
+                    <a href="https://wa.me/5577981556569?text=Quero%20descobri%20o%20seu%20segredo!" class="contact-card">
+                        <div class="card-content">
+                            <i class="fab fa-whatsapp"></i>
+                            <h3>WhatsApp</h3>
+                            <p>Atendimento imediato</p>
+                            <div class="card-action">
+                                <span class="action-text">Conversar Agora</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section brand">
+                        <div class="footer-brand">
+                            <img src="f79124cc-1858-48e7-bbab-4ab3cc0661f9_bulldog-logo-png-seeklogo-300263-removebg-preview.png" alt="Red Vendas Logo" class="footer-logo-image">
+                        </div>
+                        <p class="footer-description">Transformando negócios através do marketing digital</p>
+                    </div>
+
+                    <div class="footer-section links">
+                        <h4>Links Rápidos</h4>
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#planos">Planos</a></li>
+                            <li><a href="produtos.html">Produtos</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section contact">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="https://wa.me/5577981556569?text=Quero%20descobri%20o%20seu%20segredo!" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                            <li><a href="https://www.instagram.com/redvendas.s?igsh=MWZld3MwZ2tjNWE2Nw==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://discord.gg/RZ8y5bt7" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Discord</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section social">
+                        <h4>Redes Sociais</h4>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/redvendas.s?igsh=MWZld3MwZ2tjNWE2Nw==" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/5577981556569?text=Quero%20descobri%20o%20seu%20segredo!" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://discord.gg/RZ8y5bt7" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2025 Red Vendas - Todos os direitos reservados</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="back-to-top">
+            <a href="#" class="back-to-top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                <i class="fas fa-arrow-up"></i>
+                Voltar ao Topo
+            </a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
