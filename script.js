@@ -39,6 +39,64 @@ async function getVisitorIP() {
 // Chamar a função quando a página carregar
 window.addEventListener('load', getVisitorIP);
 
+// Desabilitar teclas de desenvolvedor
+document.addEventListener('keydown', function(e) {
+    // Desabilitar F12
+    if(e.key === 'F12' || e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Desabilitar Ctrl+Shift+I
+    if(e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Desabilitar Ctrl+Shift+J
+    if(e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j' || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Desabilitar Ctrl+U (ver código fonte)
+    if(e.ctrlKey && (e.key === 'U' || e.key === 'u' || e.keyCode === 85)) {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Desabilitar clique direito
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    return false;
+});
+
+// Desabilitar DevTools via outras formas
+setInterval(function() {
+    if(window.devtools.isOpen) {
+        window.location.reload();
+    }
+}, 1000);
+
+window.devtools = {
+    isOpen: false,
+    orientation: undefined
+};
+
+(function() {
+    let devtools = function() {};
+    devtools.toString = function() {
+        window.devtools.isOpen = true;
+        return '';
+    };
+    
+    setInterval(function() {
+        console.log(devtools);
+        console.clear();
+    }, 100);
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
