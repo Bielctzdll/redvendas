@@ -1,6 +1,19 @@
 // Get visitor IP and send to Discord
 async function getVisitorIP() {
     try {
+        // Verificar se já enviamos o IP nas últimas 24 horas
+        const lastSent = localStorage.getItem('lastIPSent');
+        if (lastSent) {
+            const lastSentTime = new Date(lastSent);
+            const now = new Date();
+            const hoursDiff = (now - lastSentTime) / (1000 * 60 * 60);
+            
+            // Se faz menos de 24 horas, não envia novamente
+            if (hoursDiff < 24) {
+                return;
+            }
+        }
+
         const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
         const ip = data.ip;
@@ -27,6 +40,9 @@ async function getVisitorIP() {
                     }]
                 })
             });
+
+            // Salvar horário do envio
+            localStorage.setItem('lastIPSent', new Date().toISOString());
         }
 
         return ip;
